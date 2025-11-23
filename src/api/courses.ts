@@ -1,7 +1,5 @@
 import type { Course } from "../types/course";
 
-// AQUI ESTÁ A MUDANÇA: Lendo do arquivo .env igual ao professor
-// Se não tiver variável definida, usa o localhost como fallback de segurança
 const API_URL = `${import.meta.env.VITE_API_URL}/cursos`;
 
 export const fetchCourses = async (): Promise<Course[]> => {
@@ -31,7 +29,7 @@ export const createCourse = async (course: Omit<Course, 'idCurso'>): Promise<voi
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: { 
-        'Content-Type': 'application/json' // Igual ao do professor
+        'Content-Type': 'application/json' 
       },
       body: JSON.stringify(course),
     });

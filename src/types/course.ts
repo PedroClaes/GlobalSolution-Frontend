@@ -7,7 +7,6 @@ export interface Course {
   vlCurso: number;     
   qtHoras: number;       
   
-
 }
 
 export interface QuestionnaireAnswers {
