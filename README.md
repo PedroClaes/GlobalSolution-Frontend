@@ -58,7 +58,7 @@ npm install
 npm run dev
 
 
-7. Como UsarA aplicação está disponível online através da Vercel.🔗 Acesse aqui: [COLOQUE_O_LINK_DA_VERCEL_AQUI]Funcionalidades principais:Home: Visão geral da plataforma.Cursos: Liste, crie, edite ou exclua cursos.Recomendação: Responda ao questionário para receber uma indicação personalizada.Tema: Clique no ícone de sol/lua na barra superior para alternar o modo de visualização.
+7. Como UsarA aplicação está disponível online através da Vercel.🔗 Acesse aqui: [global-solution-frontend.vercel.app]Funcionalidades principais:Home: Visão geral da plataforma.Cursos: Liste, crie, edite ou exclua cursos.Recomendação: Responda ao questionário para receber uma indicação personalizada.Tema: Clique no ícone de sol/lua na barra superior para alternar o modo de visualização.
 
 8. Estrutura de Pastassrc/
 ├── api/            # Serviços de conexão com o backend Java
@@ -79,4 +79,4 @@ npm run dev
 
 12. ContatoIntegranteRMTurmaLinks Pedro Gabriel Claes RM566058 1TDSPV GitHub Matheus Arazin RM556649 1TDSPV GitHub Artur Pioli RM565597 1TDSPV GitHub
 
-Links Importantes📺 Vídeo Demo (YouTube): [https://youtu.be/5eVy9IPud-8]💻 Repositório (GitHub): [https://github.com/PedroClaes/GlobalSolution-Frontend]
+Links Importantes📺 Vídeo Demo (YouTube): [https://youtu.be/5eVy9IPud-8]💻 Repositório (GitHub): [https://github.com/PedroClaes/GlobalSolution-Frontend] Dominio (Vercel): [global-solution-frontend.vercel.app]
