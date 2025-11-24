@@ -1,4 +1,4 @@
-import { Github, Linkedin, User } from 'lucide-react';
+import { Github, Linkedin} from 'lucide-react';
 import fotoIntegrante1 from '../assets/Pedro.jpeg'; 
 import fotoIntegrante2 from '../assets/Artur.jpeg';
 import fotoIntegrante3 from '../assets/Matheus.jpeg';
