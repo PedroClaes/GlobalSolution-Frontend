@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# NextStep - Recomendação de Cursos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Descrição
+Plataforma desenvolvida para a Global Solution da FIAP (Front-End Design Engineering), com o objetivo de recomendar cursos baseados no perfil do usuário. A solução utiliza um algoritmo de recomendação no front-end que cruza interesses e disponibilidade de tempo com uma base de dados consumida de uma API Java.
 
-Currently, two official plugins are available:
+## 2. Status do Projeto
+✅ **Concluído**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3. Sumário
+1. [Descrição](#1-descrição)
+2. [Status](#2-status-do-projeto)
+3. [Sobre o Projeto](#4-sobre-o-projeto)
+4. [Tecnologias Utilizadas](#5-tecnologias-utilizadas)
+5. [Instalação](#6-instalação)
+6. [Como Usar](#7-como-usar)
+7. [Estrutura de Pastas](#8-estrutura-de-pastas)
+8. [Rotas Principais](#9-endpoints-ou-rotas-principais)
+9. [Autores](#10-autores-e-créditos)
+10. [Demonstração](#11-screenshots--demonstração)
+11. [Contato](#12-contato)
 
-## React Compiler
+## 4. Sobre o Projeto
+O **NextStep** é uma Single Page Application (SPA) focada em acessibilidade e usabilidade. O sistema permite:
+* Gerenciamento de cursos (CRUD completo) integrado via API.
+* Questionário interativo para traçar o perfil do estudante.
+* Sistema de recomendação inteligente que sugere o curso ideal.
+* Alternância de tema (Dark/Light Mode).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto integra os conhecimentos de **Front-End Engineering** (React), **Domain Driven Design** (API Java) e **Database** (Oracle).
 
-## Expanding the ESLint configuration
+## 5. Tecnologias Utilizadas
+* **Linguagem:** TypeScript
+* **Framework:** React (via Vite)
+* **Estilização:** Tailwind CSS
+* **Roteamento:** React Router DOM
+* **Ícones:** Lucide React
+* **Validação:** Zod
+* **API:** Fetch API (Nativa)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 6. Instalação
+Para rodar o projeto localmente:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# 1. Clone o repositório
+git clone [https://github.com/PedroClaes/GlobalSolution-Frontend.git]
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 2. Entre na pasta
+cd NextStep
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 3. Instale as dependências
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 4. Configure as variáveis de ambiente
+# Crie um arquivo .env na raiz e adicione:
+# VITE_API_URL=https://nextstep-xh5o.onrender.com
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 5. Rode o projeto
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+7. Como UsarA aplicação está disponível online através da Vercel.🔗 Acesse aqui: [COLOQUE_O_LINK_DA_VERCEL_AQUI]Funcionalidades principais:Home: Visão geral da plataforma.Cursos: Liste, crie, edite ou exclua cursos.Recomendação: Responda ao questionário para receber uma indicação personalizada.Tema: Clique no ícone de sol/lua na barra superior para alternar o modo de visualização.
+
+8. Estrutura de Pastassrc/
+├── api/            # Serviços de conexão com o backend Java
+├── assets/         # Imagens e ícones estáticos
+├── components/     # Componentes reutilizáveis (Navbar, Cards, Forms)
+├── context/        # Context API (ThemeContext)
+├── layouts/        # Estruturas de layout padrão
+├── pages/          # Páginas da aplicação (Home, Team, Courses, About)
+├── schemas/        # Validações Zod
+├── types/          # Tipagem TypeScript (Interfaces)
+└── utils/          # Lógica do algoritmo de recomendação
+
+9. Endpoints ou Rotas PrincipaisA aplicação utiliza as seguintes rotas no Front-end:/ - Página Inicial/courses - Listagem de Cursos/courses/create - Criação de Novo Curso/courses/edit/:id - Edição de Curso/questionnaire - Questionário de Perfil/questionnaire/result - Resultado da Recomendação/team - Integrantes do Projeto/about - Sobre e FAQ
+
+10. Autores e CréditosProjeto desenvolvido pela equipe da turma 1TDSPV da FIAP.Pedro Gabriel ClaesMatheus ArazinArtur Pioli
+
+11. Screenshots / DemonstraçãoTela InicialRecomendação de Cursos(Adicione os prints na pasta do projeto ou hospede-os e coloque o link aqui)
+
+12. ContatoIntegranteRMTurmaLinks Pedro Gabriel Claes RM566058 1TDSPV GitHub Matheus Arazin RM556649 1TDSPV GitHub Artur Pioli RM565597 1TDSPV GitHub
+
+Links Importantes📺 Vídeo Demo (YouTube): [https://youtu.be/5eVy9IPud-8]💻 Repositório (GitHub): [https://github.com/PedroClaes/GlobalSolution-Frontend]
